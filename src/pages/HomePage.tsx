@@ -43,8 +43,8 @@ export default function HomePage() {
       <section className="about" id="about">
         <div className="about-image">
           <img
-            src="/images/about/portrait.jpg"
-            alt="Shoot by Matti Wirthwein"
+            src={`${import.meta.env.BASE_URL}images/about/portrait.jpg`}
+            alt="Neo Simmerling ~ shoot by Matti Wirthwein"
           />
           <span>NEOSIMMERLING / PHOTOGRAPHER</span>
         </div>
