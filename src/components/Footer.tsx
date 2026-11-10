@@ -1,4 +1,4 @@
-
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -34,7 +34,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            INSTAGRAM ↗
+            INSTAGRAM <ArrowUpRight className="button-icon" />
           </a>
 
           <Link to="/impressum">IMPRESSUM</Link>

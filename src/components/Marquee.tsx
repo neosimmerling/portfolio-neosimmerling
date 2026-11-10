@@ -1,9 +1,19 @@
+import { Asterisk } from "lucide-react";
+
 const MarqueeContent = () => (
   <>
-    <span>SPORTS PHOTOGRAPHY <b>✳</b></span>
-    <span>EVENTS <b>✳</b></span>
-    <span>TRAVEL <b>✳</b></span>
-    <span>VISUAL STORYTELLING <b>✳</b></span>
+    <span>
+      SPORTS PHOTOGRAPHY <Asterisk className="decoration-icon" />
+    </span>
+    <span>
+      EVENTS <Asterisk className="decoration-icon" />
+    </span>
+    <span>
+      TRAVEL <Asterisk className="decoration-icon" />
+    </span>
+    <span>
+      VISUAL STORYTELLING <Asterisk className="decoration-icon" />
+    </span>
   </>
 );
 

@@ -1,5 +1,6 @@
 import Marquee from "../components/Marquee";
 import Hero from "../components/Hero";
+import { ArrowUpRight } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -76,7 +77,7 @@ export default function HomePage() {
             rel="noreferrer"
             className="about-link"
           >
-            MORE ABOUT MY WORK ↗
+            MORE ABOUT MY WORK <ArrowUpRight className="button-icon" />
           </a>
         </div>
       </section>

@@ -24,6 +24,21 @@ a {
   text-decoration: none;
 }
 
+.button-icon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 1.5;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.decoration-icon {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.5;
+  flex-shrink: 0;
+}
+
 /* NAVBAR */
 
 .navbar {
@@ -759,11 +774,19 @@ a {
 .marquee-group span {
   display: inline-flex;
   align-items: center;
+  gap: 25px;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 32px;
   font-weight: 900;
   color: #fff;
   padding: 0 25px;
+}
+
+.marquee-group .decoration-icon {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.5;
+  flex-shrink: 0;
 }
 
 .marquee-group b {

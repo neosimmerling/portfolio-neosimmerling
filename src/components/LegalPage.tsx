@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 
 type LegalPageProps = {
   title: string;
@@ -22,7 +23,7 @@ export default function LegalPage({
         <span>INFORMATION / {subtitle}</span>
 
         <Link to="/" className="legal-home">
-          BACK TO HOME ↗
+          BACK TO HOME <ArrowUpRight className="button-icon" />
         </Link>
       </div>
 

@@ -1,4 +1,4 @@
-
+import { ArrowUpRight } from "lucide-react";
 import { useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
@@ -120,7 +120,7 @@ export default function Navbar() {
         className="nav-contact"
         onClick={(e) => handleSectionClick(e, "contact")}
       >
-        Let's talk <span>↗</span>
+        Let's talk <ArrowUpRight className="button-icon" />
       </a>
 
       <button
