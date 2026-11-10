@@ -939,6 +939,24 @@ a {
    Hero, Marquee, Portfolio und About
 ================================= */
 
+/* HERO – LAPTOP / TABLET */
+@media (min-width: 701px) and (max-width: 1199px) {
+  .hero::before,
+  .hero-color-reveal {
+    background-size: cover;
+    background-position: 65% center;
+  }
+
+  .hero::after {
+    background: linear-gradient(
+      90deg,
+      #090909 0%,
+      rgba(9, 9, 9, 0.75) 35%,
+      transparent 100%
+    );
+  }
+}
+
 /* TABLET */
 @media (min-width: 701px) and (max-width: 900px) {
 
