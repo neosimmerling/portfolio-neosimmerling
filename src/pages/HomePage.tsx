@@ -1,6 +1,7 @@
 import Marquee from "../components/Marquee";
 import Hero from "../components/Hero";
 import { ArrowUpRight } from "lucide-react";
+import Contact from "../components/Contact";
 
 export default function HomePage() {
   return (
@@ -81,6 +82,7 @@ export default function HomePage() {
           </a>
         </div>
       </section>
+      <Contact />
     </main>
   );
 }

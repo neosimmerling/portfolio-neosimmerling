@@ -1,9 +1,32 @@
 import { ArrowUpRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleContactClick = (
+    event: React.MouseEvent<HTMLAnchorElement>
+  ) => {
+    event.preventDefault();
+
+    const scrollToContact = () => {
+      document.getElementById("contact")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    };
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      window.setTimeout(scrollToContact, 150);
+    } else {
+      scrollToContact();
+    }
+  };
+
   return (
-    <footer className="footer" id="contact">
+    <footer className="footer">
       <div className="footer-cta">
         <span className="footer-label">
           HAVE A PROJECT IN MIND?
@@ -16,10 +39,11 @@ export default function Footer() {
         </h2>
 
         <a
-          href="mailto:neosimmerling@gmail.com"
+          href="#contact"
           className="footer-button"
+          onClick={handleContactClick}
         >
-          GET IN TOUCH <span>↗</span>
+          GET IN TOUCH <ArrowUpRight className="button-icon" />
         </a>
       </div>
 
