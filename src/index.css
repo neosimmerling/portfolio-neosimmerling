@@ -388,7 +388,9 @@ a {
   color: white;
 }
 
-.about-label {
+.about-label,
+.contact-label {
+  display: block;
   color: #e53935;
   font-size: 11px;
   letter-spacing: 4px;
@@ -436,6 +438,7 @@ a {
 }
 
 
+
 /* =========================
    CONTACT
 ========================= */
@@ -447,25 +450,25 @@ a {
   scroll-margin-top: 100px;
 }
 
-.contact-heading {
-  max-width: 900px;
-  margin-bottom: 75px;
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 9%;
+  max-width: 1450px;
+  margin: 0 auto;
+  align-items: start;
 }
 
-.contact-label {
-  display: block;
-  margin-bottom: 25px;
-  color: #e53935;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
+.contact-heading {
+  position: sticky;
+  top: 120px;
+  margin-bottom: 0;
 }
 
 .contact-heading h2 {
   margin: 0;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(58px, 9vw, 120px);
+  font-size: clamp(58px, 6vw, 100px);
   font-weight: 900;
   line-height: 0.88;
   letter-spacing: -2px;
@@ -477,12 +480,61 @@ a {
 }
 
 .contact-heading p {
-  max-width: 520px;
+  max-width: 420px;
   margin-top: 30px;
   color: #999;
   font-family: 'DM Sans', sans-serif;
   font-size: 15px;
   line-height: 1.8;
+}
+
+.contact-form {
+  width: 100%;
+  min-width: 0;
+  max-width: 750px;
+}
+
+/* LAPTOP / TABLET */
+
+@media (max-width: 1000px) {
+  .contact {
+    padding: 110px 6%;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6%;
+  }
+
+  .contact-heading h2 {
+    font-size: clamp(52px, 6vw, 75px);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 95px 6%;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .contact-heading {
+    position: static;
+  }
+
+  .contact-heading h2 {
+    font-size: clamp(48px, 11vw, 76px);
+    letter-spacing: -1px;
+  }
+
+  .contact-heading p {
+    font-size: 14px;
+  }
 }
 
 /* FORM */
@@ -1383,7 +1435,8 @@ a {
     width: 100%;
   }
 
-  .about-label {
+  .about-label,
+  .contact-label {
     font-size: 9px;
     letter-spacing: 2.5px;
   }
