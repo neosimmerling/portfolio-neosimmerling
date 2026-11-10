@@ -1,4 +1,4 @@
-
+import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
@@ -9,6 +9,7 @@ import Datenschutz from "./pages/Datenschutz";
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
 
       <Routes>

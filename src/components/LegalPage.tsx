@@ -1,4 +1,3 @@
-
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
@@ -16,21 +15,40 @@ export default function LegalPage({
   return (
     <main className="legal-page">
       <div className="legal-top">
-        <span>NEOSIMMERLING. / LEGAL INFORMATION</span>
-        <Link to="/">← BACK TO HOME</Link>
+        <Link to="/" className="legal-brand">
+          NEOSIMMERLING.
+        </Link>
+
+        <span>INFORMATION / {subtitle}</span>
+
+        <Link to="/" className="legal-home">
+          BACK TO HOME ↗
+        </Link>
       </div>
 
-      <div className="legal-heading">
-        <span>{subtitle}</span>
+      <header className="legal-heading">
+        <span>{subtitle} / LEGAL INFORMATION</span>
         <h1>{title}</h1>
-      </div>
+        <p>
+          Transparenz und Informationen rund um
+          meinen Internetauftritt.
+        </p>
+      </header>
 
-      <div className="legal-content">
-        {children}
-      </div>
+      <div className="legal-layout">
+        <aside className="legal-sidebar">
+          <span>NEOSIMMERLING.</span>
+          <span>FOTOGRAF & BILDGESTALTER</span>
+          <span>© 2026</span>
+        </aside>
 
-      <div className="legal-back">
-        <Link to="/">BACK TO NEOSIMMERLING. ↗</Link>
+        <div className="legal-content">
+          {children}
+
+          <div className="legal-back">
+            <Link to="/">← ZURÜCK ZUR STARTSEITE</Link>
+          </div>
+        </div>
       </div>
     </main>
   );
