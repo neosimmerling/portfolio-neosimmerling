@@ -47,6 +47,8 @@ export default function HomePage() {
           <img
             src={`${import.meta.env.BASE_URL}images/about/portrait.jpg`}
             alt="Neo Simmerling ~ shoot by Matti Wirthwein"
+            draggable={false}
+            onContextMenu={(event) => event.preventDefault()}
           />
           <span>NEOSIMMERLING / PHOTOGRAPHER</span>
         </div>
